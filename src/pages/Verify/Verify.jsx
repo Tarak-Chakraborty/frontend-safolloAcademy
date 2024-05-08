@@ -14,6 +14,7 @@ const Verify = () => {
     // const url = "https://backend-safolloacademy.onrender.com"
     const verifyPayment = async () => {
         const response = await axios.post(url+"/api/order/verify",{success,orderId})
+        console.log(response);
         if (response.data.success) {
             navigate("/myorders");
         } else {
@@ -23,7 +24,7 @@ const Verify = () => {
 
     useEffect(()=>{
         verifyPayment()
-    },[])
+    })
 
   return (
     <div className='verify'>
