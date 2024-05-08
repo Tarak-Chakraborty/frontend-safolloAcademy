@@ -9,9 +9,9 @@ const Verify = () => {
     const [searchParams,setSearchParams] = useSearchParams()
     const success = searchParams.get("success")
     const orderId = searchParams.get("orderId")
-    // const {url} = useContext(StoreContext)
+    const {url} = useContext(StoreContext)
     const navigate = useNavigate();
-    const url = "https://backend-safolloacademy.onrender.com"
+    // const url = "https://backend-safolloacademy.onrender.com"
     const verifyPayment = async () => {
         const response = await axios.post(url+"/api/order/verify",{success,orderId})
         if (response.data.success) {
