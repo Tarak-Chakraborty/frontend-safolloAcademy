@@ -17,7 +17,7 @@ const Verify = () => {
         if (response.data.success) {
             navigate("/myorders");
         } else {
-            navigate("/myorders");
+            navigate("/");
         }
     }
 
