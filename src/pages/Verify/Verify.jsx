@@ -14,10 +14,10 @@ const Verify = () => {
 
     const verifyPayment = async () => {
         const response = await axios.post(url+"/api/order/verify",{success,orderId})
-        if (response.data && response.data.success) {
+        if (response.data.success) {
             navigate("/myorders");
         } else {
-            navigate("/");
+            navigate("/myorders");
         }
     }
 
